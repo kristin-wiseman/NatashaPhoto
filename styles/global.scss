@@ -1,0 +1,61 @@
+//GLOBAL CSS ONLY
+@import "styles/variables";
+
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+header {
+    $mobile-fs: 3rem; //mobile font size
+    $menu-right: 30px; //R margin for button & items
+    font-size: $mobile-fs;
+    background-color: $np-green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    .item {
+        display: inline-block;
+    }
+    #menu {
+        background-color: $np-green;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: calc($mobile-fs*2.8125); //should be 2.8125 * header font size
+        width: 100%;
+        font-size: 2rem;
+        padding-bottom: 10px;
+        a {
+            display: block;
+            color: black;
+            margin-right: $menu-right;
+        }
+    }
+    #menuButton {
+        margin-right: $menu-right;
+    }
+    #siteTitle {
+        margin-left: 80px;
+        padding-bottom: 10px;
+    }
+}
+main {
+    position: relative;
+    top: 150px;
+}
+
+.serif {
+    font-family: $np-serif;
+    font-weight: 300;
+}
+.script {
+    font-family: $np-script;
+}

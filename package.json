@@ -1,0 +1,28 @@
+{
+    "name": "natasha-photography",
+    "version": "0.0.0",
+    "description": "the photography portfolio of Natasha Navarrete",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.1.1",
+        "@fortawesome/free-regular-svg-icons": "^6.1.1",
+        "@fortawesome/free-solid-svg-icons": "^6.1.1",
+        "@fortawesome/react-fontawesome": "^0.1.18",
+        "next": "^12.1.4",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-photo-album": "^1.12.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kristin-wiseman/NatashaPhoto.git"
+    },
+    "devDependencies": {
+        "sass": "^1.49.11"
+    }
+}

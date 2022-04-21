@@ -1,0 +1,13 @@
+@import "styles/variables";
+
+.about {
+    height: 200px;
+    font-family: $np-serif;
+    h1 {
+        font-family: $np-script;
+        font-size: 2rem;
+    }
+}
+.gallery {
+    background-color: white;
+}
