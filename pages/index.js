@@ -52,7 +52,7 @@ class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            photoCols: 1,
+            photoCols:  1
         }
         this.updateCols = this.updateCols.bind(this);
     }
@@ -67,16 +67,20 @@ class Index extends React.Component {
                     photoCols: 2
                 }))
             }
+        } else {
+            this.setState({photoCols: 1});
         }
 
     }
 
     componentDidMount() {
-        window.matchMedia("(min-width: 481px)").addEventListener("change", this.updateCols());
+        this.updateCols();
+        window.matchMedia("(min-width: 769px), (max-width: 481px)").addEventListener("change", this.updateCols);
     }
 
     componentWillUnmount() {
-        window.matchMedia("(min-width: 481px)").removeEventListener("change", this.updateCols());
+        window.matchMedia("(min-width: 769px), (max-width: 481px)").removeEventListener("change", this.updateCols);
+    
     }
 
     render() {
