@@ -8,43 +8,13 @@ import PhotoAlbum from 'react-photo-album'
 
 import Layout from '../components/layout'
 import styles from '../styles/index.module.scss'
-import pic2 from '../public/images/DSC_0006.jpg'
+//import headShot from '../public/images/headshot.jpg'
 
 const photos = [
     {
-        src: "/images/DSC_0001.jpg",
-        width: 3872,
-        height: 2592
-    },
-    {
-        src: "/images/DSC_0006.jpg",
-        width: 2592,
-        height: 2592
-    },
-    {
-        src: "/images/DSC_0009.jpg",
-        width: 2592,
-        height: 3872
-    },
-    {
-        src: "/images/DSC_0022.jpg",
-        width: 3872,
-        height: 2592
-    },
-    {
-        src: "/images/DSC_0029.jpg",
-        width: 2592,
-        height: 3872
-    },
-    {
-        src: "/images/DSC_0051.jpg",
-        width: 2592,
-        height: 2592
-    },
-    {
-        src: "/images/DSC_0078.jpg",
-        width: 2592,
-        height: 3872
+        src: "/images/LugoEngagement-21.jpg",
+        width: 1929,
+        height: 1286
     }
 ];
 
@@ -91,12 +61,14 @@ class Index extends React.Component {
             </Head>
             
             <section className={styles.gallery}>
-                <PhotoAlbum layout="masonry" photos={photos} columns={this.state.photoCols.toString()} />
+                <PhotoAlbum layout="masonry" photos={photos} columns={this.state.photoCols} />
             </section>
 
             <section className={styles.about}>
                 <h1>About Me</h1>
                 <p>This is an example bio! Hi, I'm Natasha Navarrete, and I'm a family and event photographer based in Chicago, IL. Write some other stuff about being awesome and having a dog because people like dog owners. Please click "Contact" in the menu above to get in touch with me!</p>
+                <div id={styles.placeholder}>head shot goes in this rectangle!</div>
+                {/* <Image src={headShot} alt="A picture of the photographer Natasha Navarrete"/>  */}
             </section>
         </>
         )

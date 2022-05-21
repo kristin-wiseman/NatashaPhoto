@@ -7,6 +7,14 @@
         font-family: $np-script;
         font-size: 2rem;
     }
+    
+    #placeholder {
+        
+        background-color: black;
+        color: yellow;
+        width: 200px;
+        height: 300px;
+    }
 }
 .gallery {
     background-color: white;
