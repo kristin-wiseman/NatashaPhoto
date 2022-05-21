@@ -1,3 +1,5 @@
 #modules/packages
 node_modules/
 .next/
+
+package-lock.json
