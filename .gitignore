@@ -3,3 +3,6 @@ node_modules/
 .next/
 
 package-lock.json
+
+#site photos
+public/images/
