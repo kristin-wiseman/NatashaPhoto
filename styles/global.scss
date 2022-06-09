@@ -6,22 +6,26 @@
 }
 a {
     text-decoration: none;
+    color: black;
+}
+body {
+    margin: 0;
 }
 header {
-    $mobile-fs: 3rem; //mobile font size
+    $mobile-fs: 2.5rem; //mobile font size
     $menu-right: 30px; //R margin for button & items
     font-size: $mobile-fs;
     background-color: $np-green;
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
-    .item {
-        display: inline-block;
+    #headerTitle {
+        margin-left: 10vw;
+        padding-bottom: 10px;
     }
     #menu {
         background-color: $np-green;
@@ -35,23 +39,39 @@ header {
         padding-bottom: 10px;
         a {
             display: block;
-            color: black;
             margin-right: $menu-right;
         }
     }
     #menuButton {
         margin-right: $menu-right;
     }
-    #siteTitle {
-        margin-left: 80px;
-        padding-bottom: 10px;
-    }
 }
-main {
+footer {
     position: relative;
-    top: 150px;
+    background-color: $np-green;
+    width: 100vw;
+    font-size: 1.5rem;
+    #credit {
+        font-size: .75rem;
+        width:fit-content;
+        margin: auto;
+        clear: both;
+        padding-bottom: 5px;
+    }
+    #footerBanner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 10px;
+        span {
+            font-size: 2rem;
+        }
+    }
+    
 }
-
+.inlineBlock {
+    display: inline-block;
+}
 .serif {
     font-family: $np-serif;
     font-weight: 300;

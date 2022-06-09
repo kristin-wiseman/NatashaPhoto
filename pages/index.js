@@ -8,11 +8,106 @@ import PhotoAlbum from 'react-photo-album'
 
 import Layout from '../components/layout'
 import styles from '../styles/index.module.scss'
-//import headShot from '../public/images/headshot.jpg'
+import headShot from '../public/images/website_round1-26.jpg'
 
 const photos = [
     {
         src: "/images/LugoEngagement-21.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-01.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-02.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-03.jpg",
+        width: 1286,
+        height: 1929
+    },
+    {
+        src: "/images/website_round1-04.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-06.jpg",
+        width: 1286,
+        height: 1929
+    },
+    {
+        src: "/images/website_round1-07.jpg",
+        width: 1286,
+        height: 1929
+    },
+    {
+        src: "/images/website_round1-09.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-10.jpg",
+        width: 1286,
+        height: 1929
+    },
+    {
+        src: "/images/website_round1-14.jpg",
+        width: 1286,
+        height: 1929
+    },
+    {
+        src: "/images/website_round1-15.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-16.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-18.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-22.jpg",
+        width: 1286,
+        height: 1929
+    },
+    {
+        src: "/images/website_round1-24.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-26.jpg",
+        width: 1286,
+        height: 1929
+    },
+    {
+        src: "/images/website_round1-27.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-28.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-29.jpg",
+        width: 1929,
+        height: 1286
+    },
+    {
+        src: "/images/website_round1-30.jpg",
         width: 1929,
         height: 1286
     }
@@ -66,9 +161,10 @@ class Index extends React.Component {
 
             <section className={styles.about}>
                 <h1>About Me</h1>
-                <p>This is an example bio! Hi, I'm Natasha Navarrete, and I'm a family and event photographer based in Chicago, IL. Write some other stuff about being awesome and having a dog because people like dog owners. Please click "Contact" in the menu above to get in touch with me!</p>
-                <div id={styles.placeholder}>head shot goes in this rectangle!</div>
-                {/* <Image src={headShot} alt="A picture of the photographer Natasha Navarrete"/>  */}
+                <div className={styles.aboutContent}>
+                    <Image src={headShot} layout="responsive" alt="A picture of the photographer Natasha Navarrete"/>
+                    <p>This is an example bio! Hi, I'm Natasha Navarrete, and I'm a family and event photographer based in Chicago, IL. Write some other stuff about being awesome and having a dog because people like dog owners. Please click "Contact" in the menu above to get in touch with me!</p>
+                </div>
             </section>
         </>
         )

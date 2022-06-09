@@ -3,6 +3,8 @@ import Link from 'next/link'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars, faXmark} from '@fortawesome/free-solid-svg-icons'
 
+import SiteTitle from "./title";
+
 function Menu(props) {
     if (props.visible) {
         return(
@@ -36,11 +38,8 @@ class Header extends React.Component {
         return (
             <>
             <header>
-                <div id="siteTitle" className="item">
-                    <div className="serif">Natasha</div>
-                    <div className="script">photography</div>
-                </div>
-                <FontAwesomeIcon id="menuButton" icon={this.state.menuIcon} onClick={this.openMenu} className="item" />
+                <SiteTitle id="headerTitle" className="inlineBlock" />
+                <FontAwesomeIcon id="menuButton" icon={this.state.menuIcon} onClick={this.openMenu} className="inlineBlock" />
                 <Menu visible={this.state.menuIsOpen}/>
             </header>
             

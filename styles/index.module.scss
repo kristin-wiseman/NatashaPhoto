@@ -1,20 +1,20 @@
 @import "styles/variables";
 
 .about {
-    height: 200px;
     font-family: $np-serif;
     h1 {
         font-family: $np-script;
         font-size: 2rem;
+        margin-block: 2.5rem .2rem;
+        text-align: center;
+    }
+    .aboutContent {
+        display: block;
+        width: 85vw;
+        margin: auto;
+       
     }
     
-    #placeholder {
-        
-        background-color: black;
-        color: yellow;
-        width: 200px;
-        height: 300px;
-    }
 }
 .gallery {
     background-color: white;
