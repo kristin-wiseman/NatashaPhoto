@@ -17,22 +17,7 @@ const photos = [
         height: 1286
     },
     {
-        src: "/images/website_round1-01.jpg",
-        width: 1929,
-        height: 1286
-    },
-    {
-        src: "/images/website_round1-02.jpg",
-        width: 1929,
-        height: 1286
-    },
-    {
-        src: "/images/website_round1-03.jpg",
-        width: 1286,
-        height: 1929
-    },
-    {
-        src: "/images/website_round1-04.jpg",
+        src: "/images/baby-girl.jpg",
         width: 1929,
         height: 1286
     },
@@ -102,12 +87,12 @@ const photos = [
         height: 1286
     },
     {
-        src: "/images/website_round1-29.jpg",
+        src: "/images/LugoEngagement-29.jpg",
         width: 1929,
         height: 1286
     },
     {
-        src: "/images/website_round1-30.jpg",
+        src: "/images/LugoEngagement-30.jpg",
         width: 1929,
         height: 1286
     }
@@ -117,7 +102,8 @@ class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            photoCols:  1
+            photoCols:  1,
+            aboutCols: "auto"
         }
         this.updateCols = this.updateCols.bind(this);
     }
@@ -125,15 +111,15 @@ class Index extends React.Component {
         if (window.matchMedia("(min-width: 481px)").matches) {
             if (window.matchMedia("(min-width: 769px)").matches) {
                 this.setState(() => ({
-                    photoCols: 3
+                    photoCols: 3, aboutCols: "60% 40%"
                 }))
             } else {
                 this.setState(()=> ({
-                    photoCols: 2
+                    photoCols: 2, aboutCols: "60% 40%"
                 }))
             }
         } else {
-            this.setState({photoCols: 1});
+            this.setState({photoCols: 1, aboutCols: "auto"});
         }
 
     }
@@ -161,9 +147,9 @@ class Index extends React.Component {
 
             <section className={styles.about}>
                 <h1>About Me</h1>
-                <div className={styles.aboutContent}>
-                    <Image src={headShot} layout="responsive" alt="A picture of the photographer Natasha Navarrete"/>
-                    <p>This is an example bio! Hi, I'm Natasha Navarrete, and I'm a family and event photographer based in Chicago, IL. Write some other stuff about being awesome and having a dog because people like dog owners. Please click "Contact" in the menu above to get in touch with me!</p>
+                <div className={styles.aboutContent} style={{gridTemplateColumns: this.state.aboutCols}}>
+                    <Image src={headShot} layout="intrinsic" alt="A picture of the photographer Natasha Navarrete"/>
+                    <span>This is an example bio! Hi, I'm Natasha Navarrete, and I'm a family and event photographer based in Chicago, IL. Write some other stuff about being awesome and having a dog because people like dog owners. Please click "Contact" in the menu above to get in touch with me!</span>
                 </div>
             </section>
         </>
