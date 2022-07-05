@@ -9,7 +9,6 @@
         text-align: center;
     }
     .aboutContent {
-        display: block;
         width: 85vw;
         margin: auto;
        
@@ -18,4 +17,12 @@
 }
 .gallery {
     background-color: white;
+}
+@media (min-width: 481px) {
+    .aboutContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: red;
+    }
+    /*2 col layout distorts image from viewport width 481 to 500ish px wide*/
 }
